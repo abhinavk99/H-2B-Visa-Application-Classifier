@@ -14,8 +14,6 @@ CASE_STATUS
 
 ### Relevant Column Names
 
-- CERTIFICATION_LENGTH (Days between CERTIFICATION_END_DATE and CERTIFICATION_BEGIN_DATE).
-    - Feature engineering for (Spring, Summer, Fall, Winter).
 - AGENT_POC_EMP_REP_BY_AGENT
     - Convert to 1 or 0
 - **[One hot encode]** SOC_CODE
@@ -55,6 +53,7 @@ CASE_STATUS
 
 ### Irrelevant Column Names
 
+- CERTIFICATION_END_DATE, CERTIFICATION_BEGIN_DATE (only shows up for records with CASE_STATUS of Certified)
 - VISA_CLASS (always H-2B)
 - SUBMIT_DATE_NEW
 - EMPLOYER_NAME
